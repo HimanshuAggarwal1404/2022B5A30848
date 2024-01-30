@@ -6,6 +6,7 @@ const Home = () => {
     <>
     <div className={styles.mainWrapper}>
 <Header/>
+<div className={styles.section1}></div>
     </div>
     </>
   )

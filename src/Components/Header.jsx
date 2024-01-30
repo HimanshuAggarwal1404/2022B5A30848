@@ -65,8 +65,13 @@ const Header = () => {
               <div className={styles.whiteLine} style={{width:WhiteLineContact?"30%":"0%"}}></div>
             </div>
           </div>
+          <div className={styles.hamburgerIcon}>
+          <i class="fa-solid fa-bars"></i>
+          </div>
         </div>
+       
       </div>
+      
       </header>
     </>
   );
