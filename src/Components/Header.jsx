@@ -37,6 +37,7 @@ const Header = () => {
     }
   return (
     <>
+    <header>
       <div className={styles.headerWrapper}>
         <div className={styles.logoWrapper}>Logo</div>
         <div className={styles.navbar}>
@@ -66,6 +67,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      </header>
     </>
   );
 };
