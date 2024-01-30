@@ -6,7 +6,18 @@ const Home = () => {
     <>
     <div className={styles.mainWrapper}>
 <Header/>
-<div className={styles.section1}></div>
+<div className={styles.section1}>
+  <div className={styles.socialMedia}>
+    <div className={styles.verticalLine}><div className={styles.line}></div></div>
+    <div className={styles.handles}>
+      <div><i class="fa-brands fa-behance"></i></div>
+      <div><i class="fa-brands fa-dribbble"></i></div>
+      <div><i class="fa-brands fa-instagram"></i></div>
+    </div>
+    <div className={styles.verticalLine}><div className={styles.line}></div></div>
+  </div>
+  <div className={styles.mainTitle}></div>
+</div>
     </div>
     </>
   )
