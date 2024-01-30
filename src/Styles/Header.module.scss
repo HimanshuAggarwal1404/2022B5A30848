@@ -1,30 +1,83 @@
-.headerWrapper{
+.headerWrapper {
     background-color: #202124;
-    border: 2px solid white;
     width: 100vw;
-    height: 20vh;
+    height: 15vh;
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    .logoWrapper{
+
+    .logoWrapper {
         height: 100%;
         width: 25%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        background-color: orange;
-    }  
-    .navbar{
+        // background-color: orange;
+        color: #FFF;
+        font-family: "Poppins";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 450;
+        line-height: normal;
+    }
+
+    .navbar {
         height: 100%;
-        width: 75%;
-        padding-right: 10%;
+        width: 55%;
+        padding-right: 5%;
         padding-left: 10%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        background-color: firebrick;
+        // background-color: firebrick;
+        font-family: "Poppins";
+        color: #fff;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 450;
+        line-height: normal;
+
+        .navbarComponent {
+            height: 100%;
+            // background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 20%;
+            &:hover{
+                cursor: pointer;
+            }
+
+            .title {
+                height: 35px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // background-color: rebeccapurple;
+            }
+
+            .whiteLineWrapper {
+                width: 100%;
+                height: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // background-color: cadetblue;
+                padding-right: 10%;
+                .whiteLine {
+                    height: 2.5px;
+                    border-radius: 2px;
+                    // width: 30%;
+                    background-color: white;
+                    transition: 0.3s ease-in-out;
+                }
+            }
+
+        }
     }
 }
