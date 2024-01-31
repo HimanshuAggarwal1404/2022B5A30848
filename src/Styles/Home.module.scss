@@ -28,7 +28,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .line{
+
+                .line {
                     height: 100%;
                     background-color: white;
                     width: 2px;
@@ -43,10 +44,15 @@
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
-                div{
+
+                div {
                     color: white;
                     transition: 0.3s ease-in-out;
-                    &:hover{
+                    i{
+                        font-size: 20px;
+                    }
+
+                    &:hover {
                         cursor: pointer;
                         color: rgba(255, 255, 255, 0.548);
                     }
@@ -57,7 +63,108 @@
         .mainTitle {
             height: 100%;
             width: 75%;
-            // background-color: green;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            // border: 2px solid red;
+
+            .mainTitleText {
+                height: 100%;
+                width: 50%;
+                // border: 2px solid yellow;
+                display: flex;
+                flex-direction: column;
+                padding-left: 2vh;
+                align-items: flex-start;
+                justify-content: center;
+
+                .titleSec1 {
+                    height: 10%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    color: #FFF;
+                    font-family: "Poppins";
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+                .titleSec2 {
+                    height: 10%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    color: #FFA588;
+                    text-transform: uppercase;
+                    font-family: "Poppins";
+                    font-size: 60px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+                .titleSec3 {
+                    color: rgba(255, 255, 255, 0.70);
+                    font-family: 'Poppins';
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    height: 10%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                }
+                .titleSec4{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 10%;
+                    width: 100%;
+                    font-family: "Poppins";
+                    .titleSec4But{
+                        width: 33%;
+                        height: 75%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: "Poppins";
+                        font-size: 16px;
+                        margin-right: 15px;
+                        border-radius: 5px;
+                        font-weight: 600;
+                        border: #FFA588 2px solid;
+                        transition: 0.3s ease-in-out;
+                        &:hover{
+                            cursor: pointer;
+                        }
+
+
+                    }
+
+                }
+
+            }
+
+            .mainTitleImg {
+                height: 100%;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
         }
     }
 }
