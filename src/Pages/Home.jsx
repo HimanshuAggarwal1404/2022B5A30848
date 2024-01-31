@@ -3,6 +3,8 @@ import styles from "../Styles/Home.module.scss";
 import Header from "../Components/Header";
 import aboutMeImg from "../assets/aboutme.svg";
 import Hacker from "../assets/Hacker-bro 1.svg";
+import ServicesCard from "../Components/ServicesCard";
+import chrome from "../assets/chrome.svg"
 const Home = () => {
   const [isHovering1, setIsHovering1] = useState(false);
   const [isHovering2, setIsHovering2] = useState(false);
@@ -99,6 +101,13 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className={styles.servicesSection}>
+          <div className={styles.ServicesTitle}></div>
+          <div className={styles.ServicesCarousel}>
+            <ServicesCard img={chrome} title="Web Development" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
+            
           </div>
         </div>
       </div>
