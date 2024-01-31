@@ -4,7 +4,10 @@ import Header from "../Components/Header";
 import aboutMeImg from "../assets/aboutme.svg";
 import Hacker from "../assets/Hacker-bro 1.svg";
 import ServicesCard from "../Components/ServicesCard";
-import chrome from "../assets/chrome.svg"
+import Brush from "../assets/paintbrush.svg";
+import insta from "../assets/insta.svg";
+import chrome from "../assets/chrome.svg";
+import { motion } from "framer-motion";
 const Home = () => {
   const [isHovering1, setIsHovering1] = useState(false);
   const [isHovering2, setIsHovering2] = useState(false);
@@ -18,7 +21,13 @@ const Home = () => {
     <>
       <div className={styles.mainWrapper}>
         <Header />
-        <div className={styles.section1}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 2 }}
+          className={styles.section1}
+        >
           <div className={styles.socialMedia}>
             <div className={styles.verticalLine}>
               <div className={styles.line}></div>
@@ -74,8 +83,14 @@ const Home = () => {
               <img src={Hacker} alt="hacker" />
             </div>
           </div>
-        </div>
-        <div className={styles.aboutMeSectionWrapper}>
+        </motion.div>
+        <motion.div
+          initial={{ x: 1000 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className={styles.aboutMeSectionWrapper}
+        >
           <div className={styles.aboutMeSection}>
             <div className={styles.aboutMeImg}>
               <img src={aboutMeImg} alt="" />
@@ -94,7 +109,6 @@ const Home = () => {
               <div className={styles.aboutMeText3}>
                 <div className={styles.aboutMeText3Text}>Follow My work on</div>
                 <div className={styles.aboutMeText3SocialMedia}>
-                  
                   <i class="fa-brands fa-behance"></i>
                   <i class="fa-brands fa-dribbble"></i>
                   <i class="fa-brands fa-instagram"></i>
@@ -102,18 +116,55 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className={styles.servicesSection}>
-          <div className={styles.ServicesTitle}>SERVICES I OFFER</div>
+        </motion.div>
+        <motion.div
+          initial={{ x: -1000 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className={styles.servicesSection}
+        >
+          <div className={styles.ServicesTitle}>
+            <div className={styles.ServicesTitleText}>SERVICES I OFFER</div>
+            <div className={styles.ServicesTitleUnderline}></div>
+          </div>
           <div className={styles.ServicesCarouselWrapper}>
-          <div className={styles.ServicesCarousel}>
-          <div className={styles.serviceCardOuter}><ServicesCard style={{transform:'scale(0.9)'}} img={chrome} title="Web Development" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/></div>
-          <div className={styles.serviceCardOuter} style={{transform:"scale(1.1"}}><ServicesCard style={{transform:'scale(1.1)'}} img={chrome} title="Web Development" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/></div>
+            <div className={styles.ServicesCarousel}>
+              <div className={styles.serviceCardOuter}>
+                <ServicesCard
+                  img={Brush}
+                  title="Graphic Designing"
+                  desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                />
+              </div>
+              <div
+                className={styles.serviceCardOuter}
+                style={{ transform: "scale(1.1" }}
+              >
+                <ServicesCard
+                  img={chrome}
+                  title="Web Development"
+                  desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                />
+              </div>
 
-            <div className={styles.serviceCardOuter}><ServicesCard img={chrome} title="Web Development" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/></div>
+              <div className={styles.serviceCardOuter}>
+                <ServicesCard
+                  img={insta}
+                  title="Social Media Marketing"
+                  desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </motion.div>
+        <motion.div
+          className={styles.projectSection}
+          initial={{ x: 1000 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+        ></motion.div>
       </div>
     </>
   );

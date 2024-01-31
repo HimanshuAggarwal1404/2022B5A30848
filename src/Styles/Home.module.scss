@@ -18,6 +18,19 @@
             font-style: normal;
             font-weight: 600;
             line-height: normal;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .ServicesTitleText {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .ServicesTitleUnderline{
+                height: 5px;
+                width: 50%;
+background-color: #FFA588;            }
         }
 
         .ServicesCarouselWrapper {
