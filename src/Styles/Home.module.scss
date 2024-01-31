@@ -3,6 +3,121 @@
     width: 100vw;
     min-height: 100vh;
 
+    .aboutMeSectionWrapper {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .aboutMeSection {
+            height: 90%;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .aboutMeImg {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                z-index: 5;
+
+            }
+        }
+
+        .aboutMeText {
+            width: 55%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-direction: column;
+            .aboutMeTitle{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                color: #FFA588;
+                font-family: "Poppins";
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+            .aboutMeText1{
+
+                width: 85%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                color: #FFF;
+                font-family: "Poppins";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+            .aboutMeText2{
+
+                width: 85%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                color: #FFF;
+                font-family: "Poppins";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+            .aboutMeText3{
+                width: 100%;
+                .aboutMeText3Text{
+                    width: 85%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    color: #FFF;
+                    font-family: "Poppins";
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                
+                }
+                .aboutMeText3SocialMedia{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    i{
+                        font-size: 22px;
+                        color: #FFA588;
+                        margin-right: 4vw;
+                        transition: 0.3s ease-in-out;
+                        &:hover{
+                            cursor: pointer;
+                            color: rgba(255, 166, 136, 0.723);
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+
     .section1 {
         height: 90vh;
         width: 100vw;
@@ -48,7 +163,8 @@
                 div {
                     color: white;
                     transition: 0.3s ease-in-out;
-                    i{
+
+                    i {
                         font-size: 20px;
                     }
 
@@ -121,7 +237,8 @@
                     align-items: center;
                     width: 100%;
                 }
-                .titleSec4{
+
+                .titleSec4 {
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-start;
@@ -129,7 +246,8 @@
                     height: 10%;
                     width: 100%;
                     font-family: "Poppins";
-                    .titleSec4But{
+
+                    .titleSec4But {
                         width: 33%;
                         height: 75%;
                         display: flex;
@@ -142,7 +260,8 @@
                         font-weight: 600;
                         border: #FFA588 2px solid;
                         transition: 0.3s ease-in-out;
-                        &:hover{
+
+                        &:hover {
                             cursor: pointer;
                         }
 
@@ -159,7 +278,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                img{
+
+                img {
                     height: 100%;
                     width: 100%;
                     object-fit: contain;
