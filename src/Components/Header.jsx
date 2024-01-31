@@ -49,7 +49,7 @@ const Header = () => {
           <div className={styles.hamburgerMenu} style={{right:Hamburger?"0%":"-100%"}}>
             <div className={styles.hmtitle}><i class="fa-solid fa-xmark" onClick={closeHamburger}></i></div>
             <div className={styles.hmnavbar}>
-              <div>Home</div>
+              <a href=""><div>Home</div></a>
               <div>About</div>
               <div>Services</div>
               <div>Contact</div>

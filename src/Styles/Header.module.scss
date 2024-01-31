@@ -105,9 +105,8 @@ header {
             flex-direction: column;
             width: 20%;
 
-            &:hover {
-                cursor: pointer;
-            }
+            
+
 
             .title {
                 height: 35px;
@@ -117,9 +116,9 @@ header {
                 align-items: center;
                 color: #fff;
                 transition: 0.2s ease-in-out;
-                &:hover {
-                    cursor: pointer;
-                }
+                // &:hover {
+                //     cursor: pointer;
+                // }
 
                 // background-color: rebeccapurple;
             }
