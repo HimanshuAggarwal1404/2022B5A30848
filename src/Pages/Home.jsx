@@ -104,10 +104,14 @@ const Home = () => {
           </div>
         </div>
         <div className={styles.servicesSection}>
-          <div className={styles.ServicesTitle}></div>
+          <div className={styles.ServicesTitle}>SERVICES I OFFER</div>
+          <div className={styles.ServicesCarouselWrapper}>
           <div className={styles.ServicesCarousel}>
-            <ServicesCard img={chrome} title="Web Development" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
-            
+          <div className={styles.serviceCardOuter}><ServicesCard style={{transform:'scale(0.9)'}} img={chrome} title="Web Development" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/></div>
+          <div className={styles.serviceCardOuter} style={{transform:"scale(1.1"}}><ServicesCard style={{transform:'scale(1.1)'}} img={chrome} title="Web Development" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/></div>
+
+            <div className={styles.serviceCardOuter}><ServicesCard img={chrome} title="Web Development" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/></div>
+            </div>
           </div>
         </div>
       </div>
