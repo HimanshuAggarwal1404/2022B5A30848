@@ -8,6 +8,7 @@ import Brush from "../assets/paintbrush.svg";
 import insta from "../assets/insta.svg";
 import chrome from "../assets/chrome.svg";
 import { motion } from "framer-motion";
+import Footer from "../Components/Footer";
 const Home = () => {
   const [isHovering1, setIsHovering1] = useState(false);
   const [isHovering2, setIsHovering2] = useState(false);
@@ -22,10 +23,10 @@ const Home = () => {
       <div className={styles.mainWrapper}>
         <Header />
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ x: -1000 }}
+          whileInView={{ x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 0.5 }}
           className={styles.section1}
         >
           <div className={styles.socialMedia}>
@@ -164,7 +165,10 @@ const Home = () => {
           whileInView={{ x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-        ></motion.div>
+        >
+
+        </motion.div>
+        <Footer />
       </div>
     </>
   );
