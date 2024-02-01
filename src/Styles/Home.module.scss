@@ -3,6 +3,104 @@
     width: 100vw;
     min-height: 100vh;
 
+    .projectSection {
+        height: 110vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .projectSectionTitle {
+            color: #FFA588;
+            font-family: "Poppins";
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .projectSectionTitleText {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .projectSectionTitleUnderline {
+                height: 5px;
+                width: 50%;
+                background-color: #FFA588;
+            }
+        }
+
+        .projectSectionHeaders {
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .projectSectionHeader {
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .headerTitle {
+                    // color: rgba(255, 255, 255, 0.442);
+                    font-family: "Poppins";
+                    font-size: 25px;
+                }
+                .headerUnderline{
+                    height: 5px;
+                    // width: 100%;
+                    // background-color: #FFA588;
+                    margin-top: 5px;
+                    transition: 0.4s ease-in-out;
+                }
+            }
+
+        }
+
+        .projectSectionContents {
+            height: 50%;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .projectSectionContent{
+                width: 100%;
+                height: 100%;
+                place-items: center;
+                grid-template-columns: auto auto auto;
+                .projectSectionCollageImg{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+
+                    img{
+                        max-width: 60%;
+                        max-height: 95%;
+                        object-fit: contain;
+                        transition: 0.3s ease-in-out;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    
+
+                }
+            }
+        }
+    }
+
     .servicesSection {
         height: 100vh;
         width: 100vw;
@@ -21,16 +119,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
             .ServicesTitleText {
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-            .ServicesTitleUnderline{
+
+            .ServicesTitleUnderline {
                 height: 5px;
                 width: 50%;
-background-color: #FFA588;            }
+                background-color: #FFA588;
+            }
         }
 
         .ServicesCarouselWrapper {
@@ -42,7 +143,7 @@ background-color: #FFA588;            }
             align-items: center;
             overflow: hidden;
 
-            
+
             .ServicesCarousel {
                 // height: 100%;
                 width: 100%;
