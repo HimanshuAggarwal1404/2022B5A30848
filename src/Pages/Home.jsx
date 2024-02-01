@@ -9,10 +9,11 @@ import insta from "../assets/insta.svg";
 import chrome from "../assets/chrome.svg";
 import { motion } from "framer-motion";
 import Footer from "../Components/Footer";
-import project1 from "../assets/project1.png"
-import project2 from "../assets/project2.png"
-import project3 from "../assets/project3.png"
-import projectkm from "../assets/projectkm.png"
+import project1 from "../assets/project1.png";
+import project2 from "../assets/project2.png";
+import project3 from "../assets/project3.png";
+import CarouselCard from "../Components/CarouselCard";
+import projectkm from "../assets/projectkm.png";
 const Home = () => {
   const [isHovering1, setIsHovering1] = useState(false);
   const [isHovering2, setIsHovering2] = useState(false);
@@ -22,30 +23,37 @@ const Home = () => {
   const [isGDActived, setIsGDActived] = useState(true);
   const [isUIActived, setIsUIActived] = useState(false);
   const [isSMActived, setIsSMActived] = useState(false);
-  const setGDActivated=()=>{
+  let carouselPosition=0;
+  const moveRight=()=>{
+    carouselPosition==-120?carouselPosition=0:carouselPosition-=60;
+  }
+  const moveLeft=()=>{
+    carouselPosition==0?carouselPosition=-120:carouselPosition+=60;
+  }
+  const setGDActivated = () => {
     setIsGDActived(true);
     setIsUIActived(false);
     setIsSMActived(false);
-  }
-  const setUIActivated=()=>{  
+  };
+  const setUIActivated = () => {
     setIsGDActived(false);
     setIsUIActived(true);
     setIsSMActived(false);
-  }
-  const setSMActivated=()=>{
+  };
+  const setSMActivated = () => {
     setIsGDActived(false);
     setIsUIActived(false);
     setIsSMActived(true);
-  }
+  };
   const changeGD = () => {
     setIsGDActive(!isGDActive);
-  }
+  };
   const changeUI = () => {
     setIsUIActive(!isUIActive);
-  }
-  const changeSM = () => {  
+  };
+  const changeSM = () => {
     setIsSMActive(!isSMActive);
-  }
+  };
   const changeHover1 = () => {
     setIsHovering1(!isHovering1);
   };
@@ -205,46 +213,167 @@ const Home = () => {
             <div className={styles.projectSectionTitleUnderline}></div>
           </div>
           <div className={styles.projectSectionHeaders}>
-          <div className={styles.projectSectionHeader} onMouseEnter={changeGD} onMouseLeave={changeGD} onClick={setGDActivated}>
-            <div className={styles.headerTitle} style={{color:isGDActived?"white":"rgba(255, 255, 255, 0.442)"}}>Graphic Designing</div>
-            <div className={styles.headerUnderline} style={{width:isGDActive || isGDActived?"100%":"0%", backgroundColor:isGDActived?"#FFA588":"white"}}></div>
-          </div>
-          <div className={styles.projectSectionHeader} onMouseEnter={changeUI} onMouseLeave={changeUI} onClick={setUIActivated}>
-            <div className={styles.headerTitle} style={{color:isUIActived?"white":"rgba(255, 255, 255, 0.442)"}}>UI-UX</div>
-            <div className={styles.headerUnderline} style={{width: isUIActive || isUIActived?"60%":"0%",backgroundColor:isUIActived?"#FFA588":"white"}}></div>
-          </div><div className={styles.projectSectionHeader} onMouseEnter={changeSM} onMouseLeave={changeSM} onClick={setSMActivated}>
-            <div className={styles.headerTitle}style={{color:isSMActived?"white":"rgba(255, 255, 255, 0.442)"}}>Social Media</div>
-            <div className={styles.headerUnderline} style={{width: isSMActive || isSMActived?"90%":"0%", backgroundColor:isSMActived?"#FFA588":"white"}}></div>
-          </div>
-
+            <div
+              className={styles.projectSectionHeader}
+              onMouseEnter={changeGD}
+              onMouseLeave={changeGD}
+              onClick={setGDActivated}
+            >
+              <div
+                className={styles.headerTitle}
+                style={{
+                  color: isGDActived ? "white" : "rgba(255, 255, 255, 0.442)",
+                }}
+              >
+                Graphic Designing
+              </div>
+              <div
+                className={styles.headerUnderline}
+                style={{
+                  width: isGDActive || isGDActived ? "100%" : "0%",
+                  backgroundColor: isGDActived ? "#FFA588" : "white",
+                }}
+              ></div>
+            </div>
+            <div
+              className={styles.projectSectionHeader}
+              onMouseEnter={changeUI}
+              onMouseLeave={changeUI}
+              onClick={setUIActivated}
+            >
+              <div
+                className={styles.headerTitle}
+                style={{
+                  color: isUIActived ? "white" : "rgba(255, 255, 255, 0.442)",
+                }}
+              >
+                UI-UX
+              </div>
+              <div
+                className={styles.headerUnderline}
+                style={{
+                  width: isUIActive || isUIActived ? "60%" : "0%",
+                  backgroundColor: isUIActived ? "#FFA588" : "white",
+                }}
+              ></div>
+            </div>
+            <div
+              className={styles.projectSectionHeader}
+              onMouseEnter={changeSM}
+              onMouseLeave={changeSM}
+              onClick={setSMActivated}
+            >
+              <div
+                className={styles.headerTitle}
+                style={{
+                  color: isSMActived ? "white" : "rgba(255, 255, 255, 0.442)",
+                }}
+              >
+                Social Media
+              </div>
+              <div
+                className={styles.headerUnderline}
+                style={{
+                  width: isSMActive || isSMActived ? "90%" : "0%",
+                  backgroundColor: isSMActived ? "#FFA588" : "white",
+                }}
+              ></div>
+            </div>
           </div>
           <div className={styles.projectSectionContents}>
-          <div className={styles.projectSectionContent}style={{display:isGDActived?"grid":"none"}}>
-            <div className={styles.projectSectionCollageImg}><img src={project1} alt="" /><div className={styles.projectSectionCollageImgOverlay}></div></div>
-            <div className={styles.projectSectionCollageImg}><img src={project2} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={project3} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={projectkm} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={project3} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={project1} alt="" /></div>
+            <div
+              className={styles.projectSectionContent}
+              style={{ display: isGDActived ? "grid" : "none" }}
+            >
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project1} alt="" />
+                <div className={styles.projectSectionCollageImgOverlay}></div>
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project2} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project3} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={projectkm} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project3} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project1} alt="" />
+              </div>
+            </div>
+            <div
+              className={styles.projectSectionContent}
+              style={{ display: isUIActived ? "grid" : "none" }}
+            >
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project3} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project1} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project2} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={projectkm} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project2} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project3} alt="" />
+              </div>
+            </div>
+            <div
+              className={styles.projectSectionContent}
+              style={{ display: isSMActived ? "grid" : "none" }}
+            >
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project2} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project3} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project1} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={projectkm} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project1} alt="" />
+              </div>
+              <div className={styles.projectSectionCollageImg}>
+                <img src={project2} alt="" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          className={styles.clientsSection}
+          initial={{ x: -1000 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+        >
+          <div className={styles.clientsTitle}>
+            <div className={styles.clientsTitleText}>WHAT MY CLIENTS SAY..</div>
+            <div className={styles.clientsTitleUnderline}></div>
+          </div>
+          <div className={styles.clientsContent}>
+            <div className={styles.arrows}></div>
+          <div className={styles.clientsCarouselWrapper}>
+            <div className={styles.clientsCarousel} style={{transform:"translateX(-60vw)"}}>
+              <CarouselCard a='1'/>
+              <CarouselCard a='2'/>
+            </div>
+          </div>
+          <div className={styles.arrows}></div>
 
-            
-          </div>
-          <div className={styles.projectSectionContent}style={{display:isUIActived?"grid":"none"}}>
-          <div className={styles.projectSectionCollageImg}><img src={project3} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={project1} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={project2} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={projectkm} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={project2} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={project3} alt="" /></div>
-          </div>
-          <div className={styles.projectSectionContent}style={{display:isSMActived?"grid":"none"}}>
-          <div className={styles.projectSectionCollageImg}><img src={project2} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={project3} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={project1} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={projectkm} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={project1} alt="" /></div>
-            <div className={styles.projectSectionCollageImg}><img src={project2} alt="" /></div>
-          </div>
           </div>
         </motion.div>
         <Footer />
