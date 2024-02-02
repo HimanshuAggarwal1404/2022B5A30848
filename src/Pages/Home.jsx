@@ -14,6 +14,8 @@ import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
 import CarouselCard from "../Components/CarouselCard";
 import projectkm from "../assets/projectkm.png";
+import leftarrow from "../assets/leftarrow.svg";
+import rightarrow from "../assets/right arrow.svg";
 const Home = () => {
   const [isHovering1, setIsHovering1] = useState(false);
   const [isHovering2, setIsHovering2] = useState(false);
@@ -23,12 +25,13 @@ const Home = () => {
   const [isGDActived, setIsGDActived] = useState(true);
   const [isUIActived, setIsUIActived] = useState(false);
   const [isSMActived, setIsSMActived] = useState(false);
-  let carouselPosition=0;
+  const [carouselPosition,setCarouselPosition]=useState(0);
   const moveRight=()=>{
-    carouselPosition==-120?carouselPosition=0:carouselPosition-=60;
+    setCarouselPosition(prevPosition => prevPosition === -120 ? 0 : prevPosition - 60);
+
   }
-  const moveLeft=()=>{
-    carouselPosition==0?carouselPosition=-120:carouselPosition+=60;
+  const moveLeft = () => {
+    setCarouselPosition(prevPosition => prevPosition === 0 ? -120 : prevPosition + 60);
   }
   const setGDActivated = () => {
     setIsGDActived(true);
@@ -365,14 +368,14 @@ const Home = () => {
             <div className={styles.clientsTitleUnderline}></div>
           </div>
           <div className={styles.clientsContent}>
-            <div className={styles.arrows}></div>
+            <div className={styles.arrows}><img src={leftarrow} alt="" onClick={moveLeft}/></div>
           <div className={styles.clientsCarouselWrapper}>
-            <div className={styles.clientsCarousel} style={{transform:"translateX(-60vw)"}}>
+            <div className={styles.clientsCarousel} style={{transform:`translateX(${carouselPosition}vw)`}}>
               <CarouselCard a='1'/>
               <CarouselCard a='2'/>
             </div>
           </div>
-          <div className={styles.arrows}></div>
+          <div className={styles.arrows}> <img src={rightarrow} alt="" onClick={moveRight}/></div>
 
           </div>
         </motion.div>
