@@ -5,6 +5,7 @@ import aboutMeImg from "../assets/aboutme.svg";
 import Hacker from "../assets/Hacker-bro 1.svg";
 import ServicesCard from "../Components/ServicesCard";
 import Brush from "../assets/paintbrush.svg";
+import thinkperson from "../assets/thinkingperson.png";
 import insta from "../assets/insta.svg";
 import chrome from "../assets/chrome.svg";
 import { motion } from "framer-motion";
@@ -25,14 +26,17 @@ const Home = () => {
   const [isGDActived, setIsGDActived] = useState(true);
   const [isUIActived, setIsUIActived] = useState(false);
   const [isSMActived, setIsSMActived] = useState(false);
-  const [carouselPosition,setCarouselPosition]=useState(0);
-  const moveRight=()=>{
-    setCarouselPosition(prevPosition => prevPosition === -120 ? 0 : prevPosition - 60);
-
-  }
+  const [carouselPosition, setCarouselPosition] = useState(0);
+  const moveRight = () => {
+    setCarouselPosition((prevPosition) =>
+      prevPosition === -120 ? 0 : prevPosition - 60
+    );
+  };
   const moveLeft = () => {
-    setCarouselPosition(prevPosition => prevPosition === 0 ? -120 : prevPosition + 60);
-  }
+    setCarouselPosition((prevPosition) =>
+      prevPosition === 0 ? -120 : prevPosition + 60
+    );
+  };
   const setGDActivated = () => {
     setIsGDActived(true);
     setIsUIActived(false);
@@ -134,13 +138,18 @@ const Home = () => {
           initial={{ x: 1000 }}
           whileInView={{ x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.4, staggerChildren: 0.5 }}
           className={styles.aboutMeSectionWrapper}
         >
           <div className={styles.aboutMeSection}>
-            <div className={styles.aboutMeImg}>
+            <motion.div
+              initial={{ scale: 0.5 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.3 }}
+              className={styles.aboutMeImg}
+            >
               <img src={aboutMeImg} alt="" />
-            </div>
+            </motion.div>
             <div className={styles.aboutMeText}>
               <div className={styles.aboutMeTitle}>ABOUT ME</div>
               <div className={styles.aboutMeText1}>
@@ -288,71 +297,161 @@ const Home = () => {
               className={styles.projectSectionContent}
               style={{ display: isGDActived ? "grid" : "none" }}
             >
-              <div className={styles.projectSectionCollageImg}>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project1} alt="" />
                 <div className={styles.projectSectionCollageImgOverlay}></div>
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project2} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project3} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={projectkm} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project3} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project1} alt="" />
-              </div>
+              </motion.div>
             </div>
             <div
               className={styles.projectSectionContent}
               style={{ display: isUIActived ? "grid" : "none" }}
             >
-              <div className={styles.projectSectionCollageImg}>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project3} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project1} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project2} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={projectkm} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project2} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project3} alt="" />
-              </div>
+              </motion.div>
             </div>
             <div
               className={styles.projectSectionContent}
               style={{ display: isSMActived ? "grid" : "none" }}
             >
-              <div className={styles.projectSectionCollageImg}>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project2} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project3} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project1} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={projectkm} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project1} alt="" />
-              </div>
-              <div className={styles.projectSectionCollageImg}>
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={styles.projectSectionCollageImg}
+              >
                 <img src={project2} alt="" />
-              </div>
+              </motion.div>
             </div>
           </div>
         </motion.div>
@@ -368,15 +467,44 @@ const Home = () => {
             <div className={styles.clientsTitleUnderline}></div>
           </div>
           <div className={styles.clientsContent}>
-            <div className={styles.arrows}><img src={leftarrow} alt="" onClick={moveLeft}/></div>
-          <div className={styles.clientsCarouselWrapper}>
-            <div className={styles.clientsCarousel} style={{transform:`translateX(${carouselPosition}vw)`}}>
-              <CarouselCard a='1'/>
-              <CarouselCard a='2'/>
+            <div className={styles.arrows}>
+              <img src={leftarrow} alt="" onClick={moveLeft} />
             </div>
-          </div>
-          <div className={styles.arrows}> <img src={rightarrow} alt="" onClick={moveRight}/></div>
-
+            <div className={styles.clientsCarouselWrapper}>
+              <div
+                className={styles.clientsCarousel}
+                style={{ transform: `translateX(${carouselPosition}vw)` }}
+              >
+                <CarouselCard
+                  img={thinkperson}
+                  content="Lorem ipsum dolor sit amet, consectetur 
+adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam."
+                  name="Person A"
+                />
+                <CarouselCard
+                  img={aboutMeImg}
+                  content="Lorem ipsum dolor sit amet, consectetur 
+adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam."
+                  name="Person B"
+                />
+                <CarouselCard
+                  img={Hacker}
+                  content="Lorem ipsum dolor sit amet, consectetur 
+adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam."
+                  name="Person C"
+                />
+              </div>
+            </div>
+            <div className={styles.arrows}>
+              {" "}
+              <img src={rightarrow} alt="" onClick={moveRight} />
+            </div>
           </div>
         </motion.div>
         <Footer />
