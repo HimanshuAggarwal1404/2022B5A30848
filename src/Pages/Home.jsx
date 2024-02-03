@@ -502,10 +502,23 @@ aliqua. Ut enim ad minim veniam."
               </div>
             </div>
             <div className={styles.arrows}>
-              {" "}
               <img src={rightarrow} alt="" onClick={moveRight} />
             </div>
           </div>
+        </motion.div>
+        <motion.div
+        initial={{ x: 1000 }}
+        whileInView={{ x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+        className={styles.contactSection}
+        >
+          <div className={styles.contactTitle}>
+            <div className={styles.contactTitleText}>GET IN TOUCH</div>
+            <div className={styles.contactTitleUnderline}></div>
+          </div>
+          <div className={styles.contactform}></div>
+
         </motion.div>
         <Footer />
       </div>
