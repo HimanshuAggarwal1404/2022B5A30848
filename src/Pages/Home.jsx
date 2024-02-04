@@ -507,18 +507,74 @@ aliqua. Ut enim ad minim veniam."
           </div>
         </motion.div>
         <motion.div
-        initial={{ x: 1000 }}
-        whileInView={{ x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.4 }}
-        className={styles.contactSection}
+          initial={{ x: 1000 }}
+          whileInView={{ x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className={styles.contactSection}
         >
           <div className={styles.contactTitle}>
             <div className={styles.contactTitleText}>GET IN TOUCH</div>
             <div className={styles.contactTitleUnderline}></div>
           </div>
-          <div className={styles.contactform}></div>
-
+          <div className={styles.contactform}>
+            <div className={styles.form}>
+              <div className={styles.formInput}>
+                <input className={styles.inputField} placeholder="Name"></input>
+              </div>
+              <div className={styles.formInput}>
+                <input
+                  className={styles.inputField}
+                  placeholder="Email"
+                ></input>
+              </div>
+              <div className={styles.formInput}>
+                <input
+                  className={styles.inputField}
+                  placeholder="Message"
+                  style={{ height: "100%" }}
+                ></input>
+              </div>
+              <div className={styles.formInput}>
+                <button className={styles.formButton}>
+                  
+                </button>
+              </div>
+            </div>
+            <div className={styles.line}></div>
+            <div className={styles.contactInfo}>
+              <div className={styles.contactField}>
+                <div className={styles.contactFieldTitle}>Phone</div>
+                <div className={styles.contactFieldContent}>
+                  +91 98876 52232
+                </div>
+              </div>
+              <div className={styles.contactField}>
+                <div className={styles.contactFieldTitle}>Email</div>
+                <div className={styles.contactFieldContent}>
+                  abcperson@gmail.com
+                </div>
+              </div>
+              <div className={styles.contactField}>
+                <div className={styles.contactFieldTitle}>Address</div>
+                <div className={styles.contactFieldContent}>
+                  H 213, ABC Street, Delhi, India
+                </div>
+              </div>
+              <div className={styles.contactField}>
+                <div className={styles.contactFieldTitle}>Social Media</div>
+                <div
+                  className={styles.contactFieldContent}
+                  style={{ width: "70%" }}
+                >
+                  {" "}
+                  <i class="fa-brands fa-behance"></i>
+                  <i class="fa-brands fa-dribbble"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
         <Footer />
       </div>
