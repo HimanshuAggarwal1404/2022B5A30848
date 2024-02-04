@@ -50,11 +50,28 @@
                 align-items: center;
                 .formInput{
                     width: 90%;
-                    height: 30%;
+                    height: 20%;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
                     align-items: flex-start;
+                    .formButton{
+                        width: 100%;
+                        height: 50%;
+                        background-color: #FFA588;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #202124;
+                        transition: 0.3s ease-in-out;
+                        font-family: "Poppins";
+                        font-size: 15px;
+                        font-weight: bolder;
+                        &:hover{
+                            background-color: #ffa68878;
+                            color: #202124;
+                        }
+                    }
                     // background-color: blue;
                     .inputField{
                         padding-left: 20px;

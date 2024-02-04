@@ -536,8 +536,8 @@ aliqua. Ut enim ad minim veniam."
                 ></input>
               </div>
               <div className={styles.formInput}>
-                <button className={styles.formButton}>
-                  
+                <button type="submit" className={styles.formButton}>
+SUBMIT
                 </button>
               </div>
             </div>
