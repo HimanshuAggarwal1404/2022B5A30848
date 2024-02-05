@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../Styles/Home.module.scss";
 import Header from "../Components/Header";
 import aboutMeImg from "../assets/aboutme.svg";
